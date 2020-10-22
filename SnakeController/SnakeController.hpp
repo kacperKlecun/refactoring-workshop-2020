@@ -37,6 +37,11 @@ private:
         int x;
         int y;
         int ttl;
+
+        friend bool operator==(const Segment& lhs, const Segment& rhs)
+        {
+            return lhs.x == rhs.x and lhs.y == rhs.y;
+        }
     };
 
     IPort& m_displayPort;
